@@ -1,0 +1,8 @@
+<ngc-toggle [buttonList]="timeFrameNames"
+            [selectedButton]="selectedTimeFrame.name"
+            (selectedButtonChange)="onSelectedTimeFrameChange($event)"></ngc-toggle>
+<ul class="tasks-chart__series-list">
+  <li *ngFor="let series of legend"
+      class="tasks-chart__series {{series.class}}">{{series.name}}</li>
+</ul>
+<div #chartContainer class="tasks-chart__container"></div>

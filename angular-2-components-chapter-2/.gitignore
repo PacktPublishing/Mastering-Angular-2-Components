@@ -1,0 +1,6 @@
+# modules
+/node_modules
+/jspm_packages
+
+# debug
+/npm-debug.log

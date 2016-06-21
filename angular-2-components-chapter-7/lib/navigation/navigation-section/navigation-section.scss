@@ -1,0 +1,44 @@
+@import "../../../settings.scss";
+
+.navigation-section {
+  display: block;
+  padding: 35px 30px 30px;
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
+
+  &__title {
+    margin-top: 0;
+    color: rgba(255, 255, 255, 0.23);
+    font-size: $font-size-large;
+    line-height: 1;
+    font-weight: 900;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    margin-right: -30px;
+    margin-left: -30px;
+    padding: 16px 30px;
+    transition: all .3s ease;
+    line-height: 1.1;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    &--active {
+      border-left: 3px solid $color-active;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+}

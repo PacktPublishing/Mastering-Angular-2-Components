@@ -1,0 +1,75 @@
+@import "../../../settings.scss";
+
+.activity {
+  display: block;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    background-color: $color-light-gray;
+    transform: translate(-50%);
+  }
+
+  &__info {
+    position: relative;
+    width: 50%;
+    text-align: right;
+    padding: 40px 80px 40px 0;
+
+    &--align-right {
+      left: 50%;
+      text-align: left;
+      padding: 40px 0 40px 80px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__author {
+    font-size: $font-size-small;
+    color: $color-gray;
+    margin-top: 0;
+  }
+
+  &__user-image {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid $color-light-gray;
+    background-color: $color-white-smoke;
+    transform: translate(-50%, -50%);
+  }
+
+  &--start-mark:after, &--end-mark:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    background-color: $color-light-gray;
+    border-radius: 50%;
+  }
+
+  &--start-mark:after {
+    bottom: 0;
+    transform: translate(-50%, 50%);
+  }
+
+  &--end-mark:after {
+    top: 0;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,27 @@
+.task-list {
+  display: block;
+
+  &__tasks {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0;
+  }
+
+  &__l-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__l-box-a {
+    flex-grow: 1;
+  }
+
+  &__l-box-b {
+    flex-grow: 2;
+  }
+
+  &__l-box-c {
+    margin-top: 50px;
+    flex-basis: 100%;
+    flex-shrink: 0;
+  }
+}

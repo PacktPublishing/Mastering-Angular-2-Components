@@ -1,0 +1,28 @@
+@import "../../../settings.scss";
+
+.activity-slider {
+  display: block;
+
+  &__slide {
+    fill: #F9F9F9;
+  }
+
+  &__activity {
+    fill: $color-blue;
+  }
+
+  &__time {
+    fill: $color-gray;
+    font-size: $font-size-small;
+  }
+
+  &__tick {
+    stroke: $color-gray;
+    stroke-width: 2px;
+    stroke-dasharray: 3px;
+  }
+
+  &__selection-overlay {
+    fill: $color-light-gray;
+  }
+}

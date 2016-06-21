@@ -1,0 +1,23 @@
+<div class="comments__title">Add new comment</div>
+<div class="comments__add-comment-section">
+  <div class="comments__add-comment-box">
+    <ngc-editor [editMode]="true"
+                [showControls]= "false"></ngc-editor>
+  </div>
+  <button (click)="addNewComment()"
+          [disabled]="isNewCommentEmpty()"
+          class="button" >Add comment</button>
+</div>
+
+<div *ngIf="hasComments()">
+  <div class="comments__title">All comments</div>
+  <ul class="comments__list">
+    <li *ngFor="let comment of comments">
+      <ngc-comment [content]="comment.content"
+                   [time]="comment.time"
+                   [user]="comment.user"
+                   (commentEdited)="onCommentEdited(comment, $event)">
+      </ngc-comment>
+    </li>
+  </ul>
+</div>

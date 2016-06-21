@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mastering Angular 2 Component - Tests</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine.css"/>
+</head>
+
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.17/angular2-polyfills.js"></script>
+<script src="jspm_packages/system.js"></script>
+<script src="config.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine-html.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/boot.js"></script>
+<script>
+  window._jasmineOnLoad = window.onload;
+  window.onload = null;
+
+  Promise.all([
+    System.import('npm:zone.js@0.6.12/dist/async-test'),
+    System.import('npm:zone.js@0.6.12/dist/fake-async-test')
+  ]).then(function() {
+      return System.import('./all.spec')
+    })
+    .then(window._jasmineOnLoad)
+    .catch(console.error.bind(console));
+
+  WebFontConfig = {
+    google: {families: ['Roboto:300,500,300italic,500italic,900:latin']},
+    custom: {families: ['entypo'], urls: ['http://weloveiconfonts.com/api/?family=entypo']}
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+</body>
+</html>

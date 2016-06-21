@@ -1,0 +1,81 @@
+@import "../settings.scss";
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  box-sizing: border-box;
+  font-family: Roboto, Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 1.25;
+  color: $color-darker-gray;
+  background-color: $color-white-smoke;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+input, button, a, select {
+  font-family: Roboto, Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 1.25;
+  font-size: $font-size-normal;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0 0 $space-s 0;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, .3);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(0, 0, 0, .3);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: rgba(0, 0, 0, .3);
+}
+
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, .3);
+}
+
+.app {
+  display: flex;
+  height: 100%;
+
+  &__l-side {
+    height: 100%;
+    flex-basis: 300px;
+    flex-shrink: 0;
+    background-color: rgb(48, 47, 43);
+  }
+
+  &__l-main {
+    flex: auto;
+    height: 100%;
+    overflow: auto;
+  }
+
+  &__l-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}

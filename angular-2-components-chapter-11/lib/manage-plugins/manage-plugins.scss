@@ -1,0 +1,85 @@
+@import "../../settings.scss";
+
+.manage-plugins {
+  display: block;
+
+  &__l-header {
+    padding: $space-xl;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.18) 0 1px 2px 0;
+  }
+
+  &__l-main {
+    padding: $space-xl;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: $space-m;
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 400;
+  }
+
+  &__sub-title {
+    margin-top: 0;
+    margin-bottom: $space-m;
+    font-size: $font-size-large;
+    line-height: 1.1;
+    font-weight: 800;
+  }
+
+  &__section {
+    padding: $space-l;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0;
+    margin-bottom: $space-xl;
+  }
+
+  &__load-elements {
+    display: flex;
+  }
+
+  &__load-url {
+    display: block;
+    flex: auto;
+    border: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.12);
+    background-color: transparent;
+    color: rgba(64, 64, 64, 0.56);
+    margin-right: $space-s;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      text-align: left;
+      text-transform: uppercase;
+      color: $color-gray;
+      font-weight: bold;
+      font-size: $font-size-small;
+    }
+
+    th, td {
+      padding: $space-s;
+    }
+
+    th, td {
+      border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  &__placement {
+    display: inline-block;
+    background-color: $color-light-gray;
+    text-decoration: none;
+    margin: 0 2px;
+    padding: 3px 10px 2px;
+    font-size: 10px;
+    font-weight: 900;
+    vertical-align: baseline;
+  }
+}

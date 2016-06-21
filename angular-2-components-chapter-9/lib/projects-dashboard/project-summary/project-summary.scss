@@ -1,0 +1,26 @@
+@import "../../../settings.scss";
+
+.project-summary {
+  display: block;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0;
+  padding: $space-m;
+
+  &__title {
+    font-weight: 400;
+    font-size: $font-size-larger;
+    margin: $space-m 0;
+    line-height: 1;
+  }
+
+  &__label {
+    width: 100%;
+    margin-top: $space-l;
+    margin-bottom: $space-s;
+    text-transform: uppercase;
+    color: #bbb;
+    font-weight: 700;
+    font-size: 14px;
+  }
+}

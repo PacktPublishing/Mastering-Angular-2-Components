@@ -1,0 +1,24 @@
+<div class="task-list__l-container">
+  <div class="task-list__l-box-a">
+    <ngc-toggle [buttonList]="taskFilterList"
+                [selectedButton]="selectedTaskFilter"
+                (selectedButtonChange)="taskFilterChange($event)"></ngc-toggle>
+  </div>
+  <div class="task-list__l-box-b">
+    <ngc-enter-task (taskEntered)="addTask($event)"></ngc-enter-task>
+  </div>
+  <div class="task-list__l-box-c">
+    <div class="task-list__tasks">
+      <ngc-task *ngcInfiniteScroll="let task of filteredTasks"
+                [task]="task"
+                (taskUpdated)="onTaskUpdated(task, $event)"
+                (taskDeleted)="onTaskDeleted(task)"
+                draggable
+                draggableType="task"
+                [draggableData]="task"
+                draggableDropZone
+                dropAcceptType="task"
+                (dropDraggable)="onTaskDrop($event, task)"></ngc-task>
+    </div>
+  </div>
+</div>

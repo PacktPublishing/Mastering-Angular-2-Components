@@ -1,0 +1,36 @@
+<div class="manage-plugins__l-header">
+  <h2 class="manage-plugins__title">Manage Plugins</h2>
+</div>
+<div class="manage-plugins__l-main">
+  <h3 class="manage-plugins__sub-title">Active Plugins</h3>
+  <div class="manage-plugins__section">
+    <table class="manage-plugins__table">
+      <thead>
+      <tr><th>Name</th><th>Url</th><th>Description</th><th>Placements</th><th></th></tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let plugin of plugins | async">
+        <td>{{plugin.config.name}}</td>
+        <td>{{plugin.url}}</td>
+        <td>{{plugin.config.description}}</td>
+        <td>
+          <div *ngFor="let placement of plugin.config.placements"
+               class="manage-plugins__placement">{{placement.slot}}
+          </div>
+        </td>
+        <td>
+          <button (click)="removePlugin(plugin.name)"
+                  class="button button--small">remove</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <h3 class="manage-plugins__sub-title">Load Plugin</h3>
+  <div class="manage-plugins__section">
+    <div class="manage-plugins__load-elements">
+      <input #loadUrlRef type="text" placeholder="Enter plugin URL" class="manage-plugins__load-url">
+      <button (click)="loadPlugin(loadUrlRef)" class="button">Load</button>
+    </div>
+  </div>
+</div>

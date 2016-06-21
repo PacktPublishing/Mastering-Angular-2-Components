@@ -1,0 +1,19 @@
+@import "../../settings.scss";
+
+.project {
+  display: block;
+
+  &__l-header {
+    padding: $space-xl;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: $space-m;
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 400;
+  }
+}

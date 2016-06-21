@@ -1,0 +1,76 @@
+@import "../../../settings.scss";
+@import "../../../mixins.scss";
+
+.editor {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  min-height: $space-xl;
+
+  &__editable-content {
+    display: none;
+    min-height: 1em;
+    word-break: break-word;
+
+    &:empty {
+      width: 100%;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__output {
+    word-break: break-word;
+  }
+
+  &__controls {
+    display: flex;
+    margin-left: $space-s;
+  }
+
+  &__icon-edit {
+    @include reset-button();
+    @include icon($icon-pencil);
+    @include fade-in();
+    color: $color-blue;
+  }
+
+  &__icon-save {
+    @include reset-button();
+    @include icon($icon-check);
+    @include fade-in();
+    color: $color-green;
+  }
+
+  &__icon-cancel {
+    @include reset-button();
+    @include icon($icon-block);
+    @include fade-in();
+    color: $color-red;
+  }
+
+  &:hover .editor__icon-edit {
+    @include fade-in(end);
+  }
+
+  &--edit-mode {
+    .editor__editable-content {
+      display: block;
+    }
+
+    .editor__output {
+      display: none;
+    }
+
+    .editor__icon-save {
+      @include fade-in(end);
+    }
+
+    .editor__icon-cancel {
+      @include fade-in(end);
+    }
+  }
+}

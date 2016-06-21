@@ -1,0 +1,22 @@
+.slide {
+  fill:#f9f9f9;
+}
+
+.activity {
+  fill:#3699cb;
+}
+
+.time {
+  fill:#bbb;
+  font-size:14px;
+}
+
+.tick {
+  stroke:#bbb;
+  stroke-width:2px;
+  stroke-dasharray:3px;
+}
+
+.selection-overlay {
+  fill:#d9d9d9;
+}

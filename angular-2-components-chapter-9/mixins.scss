@@ -1,0 +1,46 @@
+@import './settings.scss';
+
+@mixin icon($icon, $size: 40px, $padding: 5px, $background: false) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $size;
+  height: $size;
+
+  @if ($background) {
+    box-shadow: 0 0 10px $background;
+    background-color: transparentize($background, 0.2);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &:before {
+    content: $icon;
+    font-family: entypo, sans-serif;
+    text-decoration-skip: all;
+    display: block;
+    width: $size - $padding * 2;
+    height: $size - $padding * 2;
+    font-size: $size - $padding * 2;
+    line-height: 1;
+  }
+}
+
+@mixin reset-button() {
+  display: block;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+@mixin fade-in($position: start) {
+  @if ($position == start) {
+    opacity: 0;
+    transition: transform .2s ease, opacity .2s ease;
+    transform-origin: 50% 50%;
+    transform: scale(.5);
+  } @else {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

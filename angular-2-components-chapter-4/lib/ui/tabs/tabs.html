@@ -1,0 +1,10 @@
+<ul class="tabs__tab-list">
+  <li *ngFor="let tab of tabs">
+    <button class="tabs__tab-button"
+            [class.tabs__tab-button--active]="tab.active"
+            (click)="activateTab(tab)">{{tab.name}}</button>
+  </li>
+</ul>
+<div class="tabs__l-container">
+  <ng-content select="ngc-tab"></ng-content>
+</div>

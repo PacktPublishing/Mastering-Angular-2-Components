@@ -1,0 +1,15 @@
+<div class="project__l-header">
+  <h2 class="project__title">{{title}}</h2>
+  <p>{{description}}</p>
+</div>
+<ngc-tabs>
+  <ngc-tab name="Tasks">
+    <ngc-task-list [tasks]="tasks"
+                   (tasksUpdated)="updateTasks($event)"></ngc-task-list>
+  </ngc-tab>
+  <ngc-tab name="Comments">
+    <ngc-comments [comments]="comments"
+                  (commentsUpdated)="updateComments($event)"></ngc-comments>
+  </ngc-tab>
+  <ngc-tab name="Activities"></ngc-tab>
+</ngc-tabs>

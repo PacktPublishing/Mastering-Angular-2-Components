@@ -1,0 +1,84 @@
+@import "../../../settings.scss";
+
+.tasks-chart {
+  display: block;
+
+  &__container {
+    margin-top: $space-m;
+  }
+
+  svg {
+    overflow: visible;
+  }
+
+  .ct-label {
+    font-size: $font-size-small;
+    white-space: nowrap;
+  }
+
+  .ct-line, .ct-grid {
+    shape-rendering: crispEdges;
+  }
+
+  .ct-series-a {
+    .ct-line, .ct-point {
+      stroke: $color-blue;
+    }
+  }
+
+  .ct-series-b {
+    .ct-line, .ct-point {
+      stroke: $color-green;
+    }
+  }
+
+  .ct-series-c {
+    .ct-line, .ct-point {
+      stroke: $color-yellow;
+    }
+  }
+
+  .ct-series-d {
+    .ct-line, .ct-point {
+      stroke: $color-red;
+    }
+  }
+
+  &__series-list {
+    list-style: none;
+    margin: $space-xl $space-m $space-m 0;
+    padding: 0;
+    display: flex;
+  }
+
+  &__series {
+    display: flex;
+    margin-right: $space-m;
+
+    &:before {
+      display: block;
+      content: "";
+      flex-shrink: 0;
+      width: $space-m;
+      height: $space-m;
+      margin-right: $space-s;
+      background-color: $color-gray;
+    }
+
+    &--series-1:before {
+      background-color: $color-blue;
+    }
+
+    &--series-2:before {
+      background-color: $color-green;
+    }
+
+    &--series-3:before {
+      background-color: $color-yellow;
+    }
+
+    &--series-4:before {
+      background-color: $color-red;
+    }
+  }
+}

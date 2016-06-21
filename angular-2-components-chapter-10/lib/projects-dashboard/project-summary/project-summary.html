@@ -1,0 +1,9 @@
+<div class="project-summary__title">{{project?.title}}</div>
+<div class="project-summary__description">{{project?.description | limitWithEllipsis}}</div>
+<div class="project-summary__label">Total Efforts</div>
+<ngc-efforts-timeline [estimated]="totalEfforts?.estimated"
+                      [effective]="totalEfforts?.effective"
+                      height="10"></ngc-efforts-timeline>
+<p>{{totalEfforts | formatEfforts}}</p>
+<div class="project-summary__label">Activity last 24 hours</div>
+<ngc-activity-chart [activities]="activities | async"></ngc-activity-chart>

@@ -1,0 +1,74 @@
+@import "../../../settings.scss";
+
+.auto-complete {
+  display: block;
+  position: relative;
+
+  &__callout {
+    margin: 0;
+    list-style: none;
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    min-width: 200px;
+    z-index: 1;
+    padding: $space-m;
+    background-color: $color-blue;
+    transform: translate(-50%);
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      bottom: -$space-m;
+      width: 0;
+      height: 0;
+      border: $space-m/2 solid transparent;
+      border-top: $space-m/2 solid $color-blue;
+    }
+  }
+
+  &__item {
+    color: rgba(255, 255, 255, .8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+    font-weight: 400;
+    white-space: nowrap;
+
+    &:hover {
+      color: white;
+    }
+
+    &--selected {
+      color: white;
+
+      &:after {
+        content: $icon-check;
+        font-family: entypo, sans-serif;
+        display: inline-block;
+        margin-left: 5px;
+        font-size: 1em;
+        line-height: 1;
+      }
+    }
+
+    &--create {
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid currentColor;
+
+      &:before {
+        content: $icon-plus-circled;
+        font-family: entypo, sans-serif;
+        display: inline-block;
+        margin-right: 5px;
+        font-size: 20px;
+        line-height: 1;
+      }
+    }
+  }
+}

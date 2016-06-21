@@ -1,0 +1,20 @@
+@import "../../settings.scss";
+
+.tags {
+  &__tag {
+    display: inline-block;
+    background-color: $color-blue;
+    color: #fff;
+    text-decoration: none;
+    padding: 2px 4px;
+    margin: 0 2px;
+    font-size: $font-size-small;
+    vertical-align: baseline;
+    transition: all .3s ease;
+
+    &:hover {
+      background-color: transparent;
+      color: $color-blue;
+    }
+  }
+}

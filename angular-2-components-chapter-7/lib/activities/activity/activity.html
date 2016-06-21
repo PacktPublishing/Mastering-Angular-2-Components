@@ -1,0 +1,7 @@
+<img [attr.src]="activity.user.pictureDataUri" [attr.alt]="activity.user.name"
+     class="activity__user-image">
+<div class="activity__info" [class.activity__info--align-right]="isAlignedRight()">
+  <h3 class="activity__title">{{activity.title}}</h3>
+  <p class="activity__author">by {{activity.user.name}} {{activity.time | fromNow}}</p>
+  <p [innerHtml]="activity.message | tags"></p>
+</div>

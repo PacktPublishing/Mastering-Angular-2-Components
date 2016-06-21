@@ -1,0 +1,6 @@
+<div class="task-details__label">Story Points</div>
+<ngc-editor [content]="projectTaskDetails.task?.storyPoints"
+            [showControls]="true"
+            (editSaved)="onStoryPointsSaved($event)"></ngc-editor>
+<button class="button button--small" (click)="decreaseStoryPoints()">-</button>
+<button class="button button--small" (click)="increaseStoryPoints()">+</button>

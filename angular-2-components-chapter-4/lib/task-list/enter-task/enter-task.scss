@@ -1,0 +1,27 @@
+.enter-task {
+  display: block;
+  flex: auto;
+
+  &__l-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__l-box-a {
+    flex-grow: 1;
+    margin-right: 20px;
+  }
+
+  &__l-box-b {
+    flex-grow: 0;
+  }
+
+  &__title-input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.12);
+    background-color: transparent;
+    color: rgba(64, 64, 64, 0.56);
+  }
+}

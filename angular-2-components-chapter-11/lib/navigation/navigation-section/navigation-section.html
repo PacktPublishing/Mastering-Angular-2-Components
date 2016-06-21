@@ -1,0 +1,7 @@
+<h2 class="navigation-section__title">{{title}}</h2>
+<ul class="navigation-section__list">
+  <ng-content select="ngc-navigation-item"></ng-content>
+  <ngc-navigation-item *ngFor="let item of items"
+                       [title]="item.title"
+                       [link]="item.link"></ngc-navigation-item>
+</ul>

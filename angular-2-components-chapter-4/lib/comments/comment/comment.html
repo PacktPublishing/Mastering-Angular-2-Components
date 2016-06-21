@@ -1,0 +1,15 @@
+<div class="comment__l-meta">
+  <div class="comment__user-picture">
+    <img [attr.src]="user.pictureDataUri" src="">
+  </div>
+  <div class="comment__user-name">{{user.name}}</div>
+  <div class="comment__time">{{time | fromNow}}</div>
+</div>
+<div class="comment__l-main">
+  <div class="comment__message">
+    <ngc-editor [content]="content"
+                [showControls]="true"
+                (editSaved)="onContentSaved($event)">
+    </ngc-editor>
+  </div>
+</div>

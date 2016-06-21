@@ -1,0 +1,17 @@
+<svg width="100%" height="70px">
+  <rect x="0" y="30" width="100%" height="40" class="slide"></rect>
+  <rect *ngIf="selection"
+        [attr.x]="projectTime(selection.start) + '%'"
+        [attr.width]="projectTime(selection.end) - projectTime(selection.start) + '%'"
+        y="30" height="40" class="selection-overlay"></rect>
+  <g *ngFor="let tick of ticks">
+    <text [attr.x]="projectTime(tick) + '%'" y="14" class="time">
+      {{tick | calendarTime}}
+    </text>
+    <line [attr.x1]="projectTime(tick) + '%'" [attr.x2]="projectTime(tick) + '%'"
+          y1="30" y2="70" class="tick"></line>
+  </g>
+  <rect *ngFor="let activity of activities"
+        [attr.x]="projectTime(activity.time) + '%'"
+        height="40" width="2px" y="30" class="activity"></rect>
+</svg>

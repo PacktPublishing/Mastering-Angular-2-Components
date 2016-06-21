@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Angular 2 Components</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<ngc-app></ngc-app>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.17/angular2-polyfills.js"></script>
+<script src="jspm_packages/system.js"></script>
+<script src="config.js"></script>
+<script>
+  System.import('lib/bootstrap.js');
+
+  WebFontConfig = {
+    google: {families: ['Roboto:300,500,300italic,500italic,900:latin']},
+    custom: {families: ['entypo'], urls: ['http://weloveiconfonts.com/api/?family=entypo']}
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+</body>
+</html>

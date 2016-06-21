@@ -1,0 +1,10 @@
+<svg width="100%" [attr.height]="height">
+  <rect [attr.height]="height"
+        x="0" y="0" width="100%"
+        class="efforts-timeline__remaining"></rect>
+  <rect *ngIf="done" x="0" y="0" [attr.width]="done + '%'" [attr.height]="height"
+        class="efforts-timeline__done"></rect>
+  <rect *ngIf="overtime" [attr.x]="done + '%'" y="0"
+        [attr.width]="overtime + '%'" [attr.height]="height"
+        class="efforts-timeline__overtime"></rect>
+</svg>

@@ -1,0 +1,37 @@
+@import "../../settings.scss";
+
+.comments {
+  display: block;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: $space-m;
+    font-size: $font-size-large;
+    line-height: 1.1;
+    font-weight: 500;
+  }
+
+  &__add-comment-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  &__add-comment-box {
+    position: relative;
+    width: 100%;
+    padding: $space-m;
+    margin-bottom: $space-s;
+    min-height: $space-m*2 + $space-xl;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+    background-color: white;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}

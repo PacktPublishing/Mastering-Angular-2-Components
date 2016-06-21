@@ -1,0 +1,18 @@
+<div class="projects-dashboard__l-header">
+  <h2 class="projects-dashboard__title">Dashboard</h2>
+</div>
+<div class="projects-dashboard__l-main">
+  <h3 class="projects-dashboard__sub-title">Tasks Overview</h3>
+  <div class="projects-dashboard__tasks">
+    <ngc-tasks-chart [projects]="projects | async"></ngc-tasks-chart>
+  </div>
+  <h3 class="projects-dashboard__sub-title">Projects</h3>
+  <ul class="projects-dashboard__list">
+    <li *ngFor="let project of projects | async">
+      <ngc-project-summary [project]="project"
+                           [routerLink]="['/projects', project._id]">
+      </ngc-project-summary>
+    </li>
+  </ul>
+</div>
+

@@ -1,0 +1,56 @@
+@import "../../settings.scss";
+
+.projects-dashboard {
+  display: block;
+
+  &__l-header {
+    padding: $space-xl;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.18) 0 1px 2px 0;
+  }
+
+  &__l-main {
+    padding: $space-xl;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: $space-m;
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 400;
+  }
+
+  &__sub-title {
+    margin-top: 0;
+    margin-bottom: $space-m;
+    font-size: $font-size-large;
+    line-height: 1.1;
+    font-weight: 800;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      display: block;
+      width: 320px;
+      flex-grow: 0;
+      margin-right: $space-m;
+      margin-bottom: $space-m;
+    }
+  }
+
+  &__tasks {
+    display: block;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0;
+    padding: $space-m;
+    margin-bottom: $space-xl;
+  }
+}

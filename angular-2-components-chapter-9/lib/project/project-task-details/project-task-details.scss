@@ -1,0 +1,27 @@
+@import "../../../settings.scss";
+
+.task-details {
+  display: block;
+
+  &__title {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $space-l;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0;
+  }
+
+  &__label {
+    width: 100%;
+    margin-top: $space-m;
+    text-transform: uppercase;
+    color: $color-gray;
+    font-weight: bold;
+    font-size: $font-size-small;
+  }
+}

@@ -1,0 +1,16 @@
+<ngc-editor [content]="selectedItem"
+            [showControls]="true"
+            (editModeChange)="onEditModeChange($event)"
+            (editableInput)="onEditableInput($event)"
+            (editSaved)="onEditSaved($event)"
+            (editCanceled)="onEditCanceled($event)"></ngc-editor>
+<ul *ngIf="showCallout" class="auto-complete__callout">
+  <li *ngFor="let item of filteredItems"
+      (click)="selectItem(item)"
+      class="auto-complete__item"
+      [class.auto-complete__item--selected]="item === selectedItem">{{item}}</li>
+  <li *ngIf="filteredItems.length === 0" class="auto-complete__item">(Type to create new items)</li>
+  <li *ngIf="filter && !exactMatch"
+      (click)="createItem(filter)"
+      class="auto-complete__item auto-complete__item--create">Create "{{filter}}"</li>
+</ul>

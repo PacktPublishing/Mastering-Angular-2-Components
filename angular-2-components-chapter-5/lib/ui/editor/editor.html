@@ -1,0 +1,12 @@
+<div (input)="onInput($event)"
+     class="editor__editable-content"
+     contenteditable="true"
+     #editableContentElement></div>
+<div class="editor__output">{{content}}</div>
+<div *ngIf="showControls && !editMode" class="editor__controls">
+  <button (click)="edit()" class="editor__icon-edit"></button>
+</div>
+<div *ngIf="showControls && editMode" class="editor__controls">
+  <button (click)="save()" class="editor__icon-save"></button>
+  <button (click)="cancel()" class="editor__icon-cancel"></button>
+</div>

@@ -1,0 +1,15 @@
+<div class="app">
+  <div class="app__l-side">
+    <ngc-navigation [openTasksCount]="openTaskCount">
+      <ngc-navigation-section title="Main">
+        <ngc-navigation-item title="Dashboard" [link]="['/dashboard']"></ngc-navigation-item>
+      </ngc-navigation-section>
+      <ngc-navigation-section title="Projects"
+                              [items]="projectNavigationItems">
+      </ngc-navigation-section>
+    </ngc-navigation>
+  </div>
+  <div class="app__l-main">
+    <router-outlet></router-outlet>
+  </div>
+</div>

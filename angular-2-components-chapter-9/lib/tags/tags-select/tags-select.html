@@ -1,0 +1,5 @@
+<ul class="tags-select__list">
+  <li *ngFor="let tag of filteredTags"
+      (click)="onTagClick(tag)"
+      class="tags-select__item">{{tag.title}}</li>
+</ul>

@@ -1,0 +1,18 @@
+@import "../../../settings.scss";
+
+.efforts-timeline {
+  display: block;
+  width: 100%;
+
+  &__remaining {
+    fill: $color-light-gray;
+  }
+
+  &__done {
+    fill: $color-green;
+  }
+
+  &__overtime {
+    fill: $color-yellow;
+  }
+}

@@ -1,0 +1,66 @@
+@import "../../../settings.scss";
+
+.comment {
+  display: flex;
+  width: 100%;
+  margin-bottom: $space-l;
+
+  &__l-meta {
+    flex: 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__user-name {
+    font-weight: 400;
+  }
+
+  &__time {
+    font-size: $font-size-small;
+  }
+
+  &__user-picture {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+  }
+
+  &__l-main {
+    flex: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: $space-l;
+  }
+
+  &__message {
+    position: relative;
+    width: 100%;
+    padding: $space-m;
+    margin-bottom: $space-s;
+    min-height: $space-m*2 + $space-xl;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+    background-color: white;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: $space-m;
+      left: -$space-xl;
+      width: 0;
+      height: 0;
+      border: $space-xl/2 solid transparent;
+      border-right: $space-xl/2 solid white;
+    }
+  }
+
+  &__editable-content {
+    width: 100%;
+  }
+}

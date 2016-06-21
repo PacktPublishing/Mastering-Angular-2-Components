@@ -1,0 +1,9 @@
+@import "../../../../settings.scss";
+
+.activity-chart {
+  .ct-bar {
+    stroke: $color-blue;
+    stroke-width: 10px;
+    shape-rendering: crispEdges;
+  }
+}

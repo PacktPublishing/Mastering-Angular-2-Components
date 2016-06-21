@@ -1,0 +1,21 @@
+<div #editableContentElement
+     (input)="onInput($event)"
+     (keydown)="onKeyDown($event)"
+     (keypress)="onKeyPress($event)"
+     class="editor__editable-content"
+     contenteditable="true"></div>
+<div *ngIf="enableTags" class="editor__output" [innerHtml]="(content || '-') | tags"></div>
+<div *ngIf="!enableTags" class="editor__output">{{content || '-'}}</div>
+<div *ngIf="showControls && !editMode" class="editor__controls">
+  <button (click)="edit()" class="editor__icon-edit"></button>
+</div>
+<div *ngIf="showControls && editMode" class="editor__controls">
+  <button (click)="save()" class="editor__icon-save"></button>
+  <button (click)="cancel()" class="editor__icon-cancel"></button>
+</div>
+<ngc-tags-select *ngIf="enableTags"
+                 [filter]="tagInputManager.textTag"
+                 [position]="tagInputManager.position"
+                 [limit]="5"
+                 (tagSelected)="onTagSelected($event)">
+</ngc-tags-select>

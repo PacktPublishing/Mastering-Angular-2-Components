@@ -1,0 +1,21 @@
+<h3 class="task-details__title">Task Details of task #{{task?.nr}}</h3>
+<div class="task-details__content">
+  <div class="task-details__label">Title</div>
+  <ngc-editor [content]="task?.title"
+              [showControls]="true"
+              (editSaved)="onTitleSaved($event)"></ngc-editor>
+  <div class="task-details__label">Description</div>
+  <ngc-editor [content]="task?.description"
+              [showControls]="true"
+              [enableTags]="true"
+              (editSaved)="onDescriptionSaved($event)"></ngc-editor>
+  <div class="task-details__label">Efforts</div>
+  <ngc-efforts [estimated]="task?.efforts?.estimated"
+               [effective]="task?.efforts?.effective"
+               (effortsChange)="onEffortsChange($event)"></ngc-efforts>
+  <div class="task-details__label">Milestone</div>
+  <ngc-auto-complete [items]="projectMilestones"
+                     [selectedItem]="task?.milestone"
+                     (selectedItemChange)="onMilestoneSelected($event)"
+                     (itemCreated)="onMilestoneCreated($event)"></ngc-auto-complete>
+</div>

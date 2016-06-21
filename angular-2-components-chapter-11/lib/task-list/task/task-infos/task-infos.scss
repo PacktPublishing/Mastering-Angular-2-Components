@@ -1,0 +1,11 @@
+@import "../../../../settings.scss";
+
+.task-infos {
+  display: flex;
+  color: $color-dark-gray;
+  font-size: $font-size-small;
+
+  &__info {
+    margin-right: $space-m;
+  }
+}

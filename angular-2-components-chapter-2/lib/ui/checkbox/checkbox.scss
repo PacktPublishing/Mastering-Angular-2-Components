@@ -1,0 +1,53 @@
+@import "../../../settings.scss";
+
+.checkbox {
+  display: block;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.26);
+    border: 2px solid rgba(0, 0, 0, 0.24);
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__input {
+    display: block;
+    opacity: 0;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__text {
+    display: block;
+    margin-left: 30px;
+  }
+
+  &__text:before {
+    content: $icon-check;
+    font-family: entypo, sans-serif;
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: -20px;
+    font-size: 50px;
+    color: transparent;
+
+    transition: all .2s ease;
+    transform: scale(.5);
+  }
+
+  &__input:checked + &__text:before {
+    color: $color-green;
+    transform: scale(1);
+  }
+}

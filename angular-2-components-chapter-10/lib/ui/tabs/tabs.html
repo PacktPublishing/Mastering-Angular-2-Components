@@ -1,0 +1,11 @@
+<ul class="tabs__tab-list">
+  <li *ngFor="let item of items">
+    <a class="tabs__tab-button"
+       [routerLink]="item.link">{{item.title}}</a>
+  </li>
+</ul>
+<div class="tabs__l-container">
+  <div class="tabs__tab tabs__tab--active">
+    <router-outlet></router-outlet>
+  </div>
+</div>

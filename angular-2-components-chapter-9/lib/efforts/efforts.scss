@@ -1,0 +1,11 @@
+@import "../../settings.scss";
+
+.efforts {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__label {
+    margin-right: $space-s;
+  }
+}

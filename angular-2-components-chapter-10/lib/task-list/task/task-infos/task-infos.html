@@ -1,0 +1,5 @@
+<ngc-task-info [info]="'#' + task.nr"></ngc-task-info>
+<ngc-task-info title="Created" [info]="task.created | calendarTime"></ngc-task-info>
+<ngc-task-info title="Milestone" [info]="task.milestone"></ngc-task-info>
+<ngc-task-info title="Efforts" [info]="task.efforts | formatEfforts"></ngc-task-info>
+<ngc-plugin-slot name="task-info"></ngc-plugin-slot>

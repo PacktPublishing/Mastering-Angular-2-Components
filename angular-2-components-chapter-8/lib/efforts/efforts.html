@@ -1,0 +1,12 @@
+<div class="efforts__label">Estimated:</div>
+<ngc-duration [duration]="estimated"
+              (durationChange)="onEstimatedChange($event)"></ngc-duration>
+<div class="efforts__label">Effective:</div>
+<ngc-duration [duration]="effective"
+              (durationChange)="onEffectiveChange($event)"></ngc-duration>
+<button class="button button--small" (click)="addEffectiveHours(1)">+1h</button>
+<button class="button button--small" (click)="addEffectiveHours(4)">+4h</button>
+<button class="button button--small" (click)="addEffectiveHours(8)">+1d</button>
+<ngc-efforts-timeline height="10"
+                      [estimated]="estimated"
+                      [effective]="effective"></ngc-efforts-timeline>

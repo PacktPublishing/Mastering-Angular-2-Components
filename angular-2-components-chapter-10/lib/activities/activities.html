@@ -1,0 +1,11 @@
+<ngc-activity-slider [activities]="activities"
+                     (selectionChange)="onSelectionChange($event)">
+</ngc-activity-slider>
+<div class="activities__l-container">
+  <ngc-activity *ngFor="let activity of selectedActivities, let index = index"
+                [activity]="activity"
+                [alignment]="getAlignment(index)"
+                [startMark]="isLast(index)"
+                [endMark]="isFirst(index)">
+  </ngc-activity>
+</div>
